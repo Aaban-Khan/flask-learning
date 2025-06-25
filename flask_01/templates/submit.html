@@ -1,0 +1,21 @@
+<!DOCTYPE html>
+<html lang="en">
+<head>
+    <meta charset="UTF-8">
+    <meta name="viewport" content="width=device-width, initial-scale=1.0">
+    <title>Submit Form</title>
+</head>
+<body>
+    <!-- 🧩 Reusable navbar file include kar rahe hain -->
+    {% include "utilities/nav.html" %}
+
+    <!-- 🧾 Form banaya hai — method POST hone se data URL me nahi dikhega -->
+    <form method="POST" action="/submit">
+        <!-- ✅ Input field jiska name='username' diya gaya hai, isi se backend me data identify hota hai -->
+        <input type="text" name="username" placeholder="Enter your name..." required>
+
+        <!-- 🚀 Submit button jo form ko POST karta hai -->
+        <input type="submit" value="Submit">
+    </form>
+</body>
+</html>

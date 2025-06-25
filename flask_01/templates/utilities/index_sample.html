@@ -1,0 +1,24 @@
+<!DOCTYPE html>
+<html lang="en">
+<head>
+    <meta charset="UTF-8">
+    <meta name="viewport" content="width=device-width, initial-scale=1.0">
+    <title>Document</title>
+    <link rel="stylesheet" href="static/style.css">
+</head>
+<body>
+    {% include "utilities/nav.html" %}
+    {# Ye line user ka naam dikhane ke liye hai #}
+    <h1>Hello from home {{name}}</h1>
+    {# yha hum {%...%} me for, while, conditional statements use kar sakte hai #}
+    {% for n in name: %}
+        {% if n != "b": %}
+            <h4>{{n}}</h4>
+        {% endif %}
+    {% endfor %}
+    {# end(jo humne use kiya) karna jaruri hota hai #}
+
+
+    {# jinja me comments aise kiye jate hai!! aur aagar isse koi browser me inspect karega to ye comment visible nhi hoga!! #}
+</body>
+</html>
