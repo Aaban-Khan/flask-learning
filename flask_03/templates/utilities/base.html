@@ -1,0 +1,16 @@
+<!DOCTYPE html>
+<html lang="en">
+  <head>
+    <meta charset="UTF-8" />
+    <title>My {% block title %} Flask App{% endblock %}</title>
+
+    <!-- ✅ Tailwind CDN link -->
+    <script src="https://cdn.tailwindcss.com"></script>
+  </head>
+  <body class="bg-gray-900 text-white">
+    {% include 'utilities/nav.html' %}
+
+    <!-- ✅ Page-specific content -->
+    {% block content %}{% endblock %} {% include 'utilities/footer.html'%}
+  </body>
+</html>
